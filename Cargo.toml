@@ -44,7 +44,7 @@ serde_json = { version = "1.0.136", features = [] }
 hex = "0.4.3"
 minicbor = { package = "cquisitor-minicbor", version = "0.19.0", features = ["std", "half", "derive"] }
 cryptoxide = "0.4.4"
-uplc = "=1.1.10"
+uplc = "1.1.10"
 pallas-codec = "0.31.0"
 pallas-traverse = "0.31.0"
 pallas-primitives = "0.31.0"
