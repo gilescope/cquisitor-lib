@@ -11,6 +11,7 @@ use crate::validators::{
     validation_result::ValidationResult,
 };
 
+#[allow(dead_code)]
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 enum RegistrableEntity {
     Account(String),
@@ -1258,7 +1259,7 @@ impl<'a> RegistrationValidator<'a> {
                     .validation_input_context
                     .find_current_committee_member_by_cold_credential(&committee_cold_credential)
                     .is_some();
-                
+
                 if !is_potential_member && !is_current_member {
                     errors.push(ValidationPhase1Error::new(
                         Phase1Error::CommitteeIsUnknown {
@@ -1322,7 +1323,7 @@ impl<'a> RegistrationValidator<'a> {
                     .validation_input_context
                     .find_current_committee_member_by_cold_credential(&committee_cold_credential)
                     .is_some();
-                
+
                 if !is_potential_member && !is_current_member {
                     errors.push(ValidationPhase1Error::new(
                         Phase1Error::CommitteeIsUnknown {

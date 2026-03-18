@@ -366,7 +366,7 @@ pub fn cbor_pos_to_value(pos: &CborPos) -> Value {
 }
 
 /// Creates an `ExtendedTokenizer` from raw CBOR data.
-pub fn get_tokenizer(data: &[u8]) -> ExtendedTokenizer {
+pub fn get_tokenizer<'a>(data: &'a[u8]) -> ExtendedTokenizer<'a> {
     Decoder::new(data).into()
 }
 
